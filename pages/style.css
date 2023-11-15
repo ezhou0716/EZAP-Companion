@@ -2,6 +2,10 @@ html {
     background-color: #1e1e1e;
 }
 
+body {
+    margin: 0;
+}
+
 .header {
     display: inline-flex;
     text-align: center;
