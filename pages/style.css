@@ -11,7 +11,22 @@ body {
 
 .header {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.header img {
+    width: 90px;
+    border: 3px solid #9eabcc;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.header h1 {
     font-family: 'Khand';
-    margin: 0 auto;
+    font-size: 60px;
     color: #ffffff;
+    letter-spacing: 0.15em;
+    margin-left: 25px;
 }
