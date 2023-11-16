@@ -34,11 +34,12 @@ body {
     font-family: 'Lekton';
     text-align: center;
     color: #ffffff;
+    margin-top: -60px;
 }
 
 h2 {
     font-size: 40px;
-    margin: 200px 0px 80px;
+    margin: 200px 0px 120px;
 }
 
 a {
