@@ -46,6 +46,13 @@ a {
     font-size: 40px;
     padding: 20px 60px;
     border: #9eabcc 3px solid;
+    color: #ffffff;
     border-radius: 50px;
     text-decoration: none;
+    transition: 0.3s all ease-in-out;
 }
+
+a:hover {
+    background-color: #9eabcc;
+    color: #1e1e1e;
+  }
