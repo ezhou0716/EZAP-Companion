@@ -58,9 +58,12 @@ a:hover {
 }
 
 .search {
-    
+    display: flex;
 }
 
 select {
+    margin-left: 100px;
     background-color: #1e1e1e;
+    font-family: 'Lekton';
+    color: #ffffff;
 }
