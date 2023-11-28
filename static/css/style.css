@@ -42,7 +42,7 @@ h2 {
     margin: 200px 0px 120px;
 }
 
-/*a {
+a {
     font-size: 40px;
     padding: 20px 60px;
     border: #9eabcc 3px solid;
@@ -55,4 +55,12 @@ h2 {
 a:hover {
     background-color: #9eabcc;
     color: #1e1e1e;
-  }*/
+}
+
+.search {
+    
+}
+
+select {
+    background-color: #1e1e1e;
+}
