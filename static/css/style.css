@@ -70,21 +70,4 @@ select {
     color: #ffffff;
     border: #9eabcc 3px solid;
     border-radius: 10px;
-    /* for arrow */
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    position: relative;
-    cursor: pointer;
-}
-
-select::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    border-style: solid;
-    border-width: 6px 6px 0;
-    border-color: #9eabcc transparent transparent transparent;
 }
