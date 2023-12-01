@@ -57,11 +57,16 @@ a:hover {
     color: #1e1e1e;
 }
 
-.search {
+.container{
     display: flex;
+    width: 50%;
 }
 
-select {
+.search{
+    flex: 1;
+ }
+
+.search select {
     margin-left: 100px;
     padding: 10px;
     font-size: 20px;
@@ -70,4 +75,5 @@ select {
     color: #ffffff;
     border: #9eabcc 3px solid;
     border-radius: 10px;
+    width: 40%;
 }
