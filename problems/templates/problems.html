@@ -1,18 +1,16 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="icon" type="image/svg" href="{% static 'img/logo.svg' %}">
+        <link rel="icon" type="image/svg" href="img/logo.svg">
         <title>EZ AP Companion | Problems</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
-
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
         <div class="header">
-            <img src="{% static 'img/logo.svg' %}" alt="logo" >
+            <img src="img/logo.svg" alt="logo" >
             <h1>COMPANION</h1>
         </div>
         <div class = "container">
@@ -30,7 +28,7 @@
                     <option value="series">Unit 10: Infinite Sequences and Series</option>
                 </select>
     
-                <select id='multiple' multiple style="width:300px;
+                <select id='multiple' multiple='multiple' style="width:300px;
                 border: #9eabcc 3px solid;
                 border-radius: 10px;
                 ">
@@ -50,6 +48,17 @@
         </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
-<script src = "{% static 'js/multi-select.js' %}"></script>
+
+<!-- script src = "js/multi-select.js"></script -->
+<script>
+//$( document ).ready(function() {
+ $('#units').select2();
+
+ $('#multiple').select2({
+	minimumResultsForSearch: 20
+ });
+//}
+</script>
+
     </body>
 </html>
