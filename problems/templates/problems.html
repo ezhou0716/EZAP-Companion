@@ -2,20 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="icon" type="image/svg" href="img/logo.svg">
+        <link rel="icon" type="image/svg" href="{% static 'img/logo.svg' %}">
         <title>EZ AP Companion | Problems</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     </head>
     <body>
-        <div class="header">
-            <img src="{% static 'img/logo.svg' %}" alt="logo" href = "/home/" >
-            <h1>COMPANION</h1>
-        </div>
-        <div class = "container">
-            <div class="search">
+        <a href = "/home/">
+            <div class="header">
+                <img src="{% static 'img/logo.svg' %}" alt="logo">
+                <h1>COMPANION</h1>
+            </div>
+        </a>
+        <div class="selection">
+            <div class="unit-selection">
                 <select name="units" id="units">
                     <option value="limits">Unit 1: Limits and Continuity</option>
                     <option value="derivatives">Unit 2: Differentiation: Definition and Fundamental Properties</option>
@@ -27,39 +28,48 @@
                     <option value="integralapps">Unit 8: Applications of Integration</option>
                     <option value="polars">Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions</option>
                     <option value="series">Unit 10: Infinite Sequences and Series</option>
-                </select>
-    
-                <select id='multiple' multiple='multiple' style="width:300px;
-                border: #9eabcc 3px solid;
-                border-radius: 10px;
-                ">
-                <option value="Derivatives">Derivatives</option>
-                <option value="Power Rule">Power Rule</option>
-                <option value="Product Rule">Product Rule</option>
-                <option value="Chain Rule">Chain Rule</option>
-                <option value="Quotient Rule">Quotient Rule</option>
-                <option value="Trigonometric Functions">Trigonometric Functions</option>
-                <option value="Logarithmic Functions">Logarithmic Functions</option>
-                <option value="Implicit Differentiation">Implicit Differentiation</option>
-                <option value="Derivative at a Point">Derivative at a Point</option>
-                <option value="Derivatives From a Table">Derivatives From a Table</option>
-                <option value="Intervals">Intervals</option>
-                </select>
+                </select>            
+            </div>
+            <div class="tag-selection">
+                <div>
+                    <span class="tag-button">Select Tags</span>
+                </div>
+                <ul class="tags">
+                    <li class="tag">
+                        <span class="tag-text">Derivatives</span>
+                    </li>
+                    <li class="tag">
+                        <span class="tag-text">Power Rule</span>
+                    </li>
+                    <li class="tag">
+                        <span class="tag-text">Product Rule</span>
+                    </li>
+                    <li class="tag">
+                        <span class="tag-text">Chain Rule</span>
+                    </li>
+                    <li class="tag">
+                        <span class="tag-text">Quotient Rule</span>
+                    </li>
+                    <li class="tag">
+                        <span class="tag-text">Trigonometric Functions</span>
+                    </li>
+                    <li class="tag">
+                        <span class="tag-text">Logarithmic Functions</span>
+                    </li>
+                    <li class="tag">
+                        <span class="tag-text">Implicit Differentiation</span>
+                    </li>
+                    <li class="tag">
+                        <span class="tag-text">Derivative at a Point</span>
+                    </li>
+                    <li class="tag">
+                        <span class="tag-text">Table</span>
+                    </li>
+                    <li class="tag">
+                        <span class="tag-text">Intervals</span>
+                    </li>
+                </ul>
             </div>
         </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
-
-<!-- script src = "js/multi-select.js"></script -->
-<script>
-//$( document ).ready(function() {
- $('#units').select2();
-
- $('#multiple').select2({
-	minimumResultsForSearch: 20
- });
-//}
-</script>
-
     </body>
 </html>
