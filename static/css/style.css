@@ -79,7 +79,6 @@ a {
 
 .tag-button {
     margin-left: 100px;
-    margin-top: 50px;
     padding: 13px;
     font-size: 20px;
     font-family: 'Lekton';
@@ -91,8 +90,10 @@ a {
 
 .tags {
     display: none;
+    color: #ffffff;
+    border: 1px solid red;
 }
 
-.tags .open {
+.tags.open {
     display: block;
 }
