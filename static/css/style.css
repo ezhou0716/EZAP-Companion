@@ -91,7 +91,7 @@ a {
 .tags {
     display: none;
     color: #ffffff;
-    border: 1px solid red;
+    background-color: #ffffff;
 }
 
 .tags.open {
