@@ -31,9 +31,7 @@
                 </select>            
             </div>
             <div class="tag-selection">
-                <div>
-                    <span class="tag-button">Select Tags</span>
-                </div>
+                <span class="tag-button">Tags: </span>
                 <ul class="tags">
                     <li class="tag">
                         <span class="tag-text">Derivatives</span>
@@ -69,6 +67,14 @@
                         <span class="tag-text">Intervals</span>
                     </li>
                 </ul>
+                <script>
+                    const tagButton = document.querySelector(".tag-button");
+                    const tags = document.querySelector(".tags");
+
+                    tagButton.addEventListener("click", () => {
+                        tags.classList.toggle("open");
+                    });
+                </script>
             </div>
         </div>
     </body>
