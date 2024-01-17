@@ -79,10 +79,10 @@ a {
 
 .tag-selection {
     position: relative;
+    justify-content: center;
 }
 
 .tag-button {
-    margin-left: 100px;
     padding: 13px;
     width: 100%;
     font-size: 20px;
@@ -97,7 +97,7 @@ a {
 .tags {
     display: none;
     position: absolute;
-    width: 100%;
+    width: 80%;
     font-size: 20px;
     font-family: 'Lekton';
     color: #ffffff;
