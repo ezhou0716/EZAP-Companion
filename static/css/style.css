@@ -77,22 +77,37 @@ a {
     border-radius: 10px;
 }
 
+.tag-selection {
+    position: relative;
+}
+
 .tag-button {
     margin-left: 100px;
     padding: 13px;
+    width: 100%;
     font-size: 20px;
     font-family: 'Lekton';
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: #9eabcc 3px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.tags {
+    display: none;
+    position: absolute;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Lekton';
+    color: #ffffff;
     background-color: #1e1e1e;
     border: #9eabcc 3px solid;
     border-radius: 10px;
 }
 
-.tags {
-    display: none;
-    color: #9eabcc;
-    background-color: #1e1e1e;
-    border: #9eabcc 3px solid;
-    border-radius: 10px;
+.tags li {
+    padding: 5px;
 }
 
 .tags.open {
