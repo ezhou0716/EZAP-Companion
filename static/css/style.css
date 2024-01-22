@@ -63,7 +63,6 @@ a {
 
 .selection {
     display: flex;
-    align-items: center;
 }
 
 .unit-selection select {
@@ -79,31 +78,34 @@ a {
 
 .tag-selection {
     position: relative;
-    justify-content: center;
+    margin: auto;
 }
 
 .tag-button {
     padding: 13px;
-    width: 100%;
     font-size: 20px;
     font-family: 'Lekton';
     background-color: #1e1e1e;
     color: #ffffff;
     border: #9eabcc 3px solid;
     border-radius: 10px;
-    box-sizing: border-box;
+    text-align: left;
+    width: 600px;
 }
 
 .tags {
     display: none;
-    position: absolute;
-    width: 80%;
     font-size: 20px;
     font-family: 'Lekton';
     color: #ffffff;
     background-color: #1e1e1e;
     border: #9eabcc 3px solid;
     border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 600px;
 }
 
 .tags li {
