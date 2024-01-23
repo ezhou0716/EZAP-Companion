@@ -82,6 +82,10 @@ a {
 .selection {
     display: flex;
 }
+ul
+{
+list-style-type: none;
+}
 
 .unit-selection select {
     margin-left: 100px;
@@ -109,11 +113,17 @@ a {
     border-radius: 10px;
     text-align: left;
     width: 600px;
+    transition: 0.3s all ease-in-out;
 }
-
+.tag-button:hover {
+    cursor:pointer;
+    background-color: #9eabcc;
+    color: #1e1e1e;
+    cursor:pointer;
+}
 .tags {
     display: none;
-    font-size: 20px;
+    font-size: 1.4em;
     font-family: 'Lekton';
     color: #ffffff;
     background-color: #1e1e1e;
@@ -121,9 +131,11 @@ a {
     border-radius: 10px;
     position: absolute;
     top: 100%;
-    left: 50%;
     transform: translateX(-50%); 
-    width: 600px;
+    margin-left:3vw;
+    width: 24vw;
+    padding-top: .7vw;
+    padding-bottom: .7vw;
 }
 
 .tags li {
