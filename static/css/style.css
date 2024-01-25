@@ -140,8 +140,80 @@ list-style-type: none;
 
 .tags li {
     padding: 5px;
+    margin-left:-1.2vw;
 }
 
 .tags.open {
     display: block;
 }
+
+.dropdown_menu-1 .dropdown_item-1,
+.dropdown_menu-1 .dropdown_item-2,
+.dropdown_menu-1 .dropdown_item-3,
+.dropdown_menu-1 .dropdown_item-4,
+.dropdown_menu-1 .dropdown_item-5,
+.dropdown_menu-1 .dropdown_item-6,
+.dropdown_menu-1 .dropdown_item-7,
+.dropdown_menu-1 .dropdown_item-8,
+.dropdown_menu-1 .dropdown_item-9,
+.dropdown_menu-1 .dropdown_item-10,
+.dropdown_menu-1 .dropdown_item-11 {
+    opacity: 0;
+    transform: translateY(-60px);
+    transform-origin: top center;
+    animation: slideDown 300ms ease-in-out forwards;
+}
+
+.dropdown_menu-1 .dropdown_item-1 { animation-delay: 60ms; }
+.dropdown_menu-1 .dropdown_item-2 { animation-delay: 120ms; }
+.dropdown_menu-1 .dropdown_item-3 { animation-delay: 180ms; }
+.dropdown_menu-1 .dropdown_item-4 { animation-delay: 240ms; }
+.dropdown_menu-1 .dropdown_item-5 { animation-delay: 300ms; }
+.dropdown_menu-1 .dropdown_item-6 { animation-delay: 360ms; }
+.dropdown_menu-1 .dropdown_item-7 { animation-delay: 420ms; }
+.dropdown_menu-1 .dropdown_item-8 { animation-delay: 480ms; }
+.dropdown_menu-1 .dropdown_item-9 { animation-delay: 540ms; }
+.dropdown_menu-1 .dropdown_item-10 { animation-delay: 600ms; }
+.dropdown_menu-1 .dropdown_item-11 { animation-delay: 660ms; }
+
+@-moz-keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@-o-keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
