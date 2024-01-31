@@ -127,7 +127,6 @@ list-style-type: none;
     font-family: 'Lekton';
     color: #ffffff;
     background-color: #1e1e1e;
-    border: #9eabcc 3px solid;
     border-radius: 10px;
     position: absolute;
     top: 100%;
@@ -137,10 +136,18 @@ list-style-type: none;
     padding-top: .7vw;
     padding-bottom: .7vw;
 }
-
+.tag{
+    border: #9eabcc 1.5px solid;
+    border-radius: 30px;
+    margin-right:5vw;
+    margin-top: .5vw;
+}
+.tag .dropdown_item-1{
+    margin-top:-5.5vw;
+}
 .tags li {
     padding: 5px;
-    margin-left:-1.2vw;
+    margin-left:1.2vw;
 }
 
 .tags.open {
