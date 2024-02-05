@@ -137,7 +137,7 @@ list-style-type: none;
     padding-top: .7vw;
     padding-bottom: .7vw;
 }
-.tag{
+.tag {
     border: #9eabcc 1.5px solid;
     border-radius: 30px;
     margin-right:5vw;
@@ -194,6 +194,7 @@ list-style-type: none;
         transform: translateY(0);
     }
 }
+
 @-webkit-keyframes slideDown {
     0% {
         opacity: 0;
@@ -214,6 +215,7 @@ list-style-type: none;
         transform: translateY(0);
     }
 }
+
 @keyframes slideDown {
     0% {
         opacity: 0;
@@ -223,4 +225,10 @@ list-style-type: none;
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.problem {
+    position: absolute;
+    margin-top: 10px;
+    padding: 10px;
 }

@@ -103,13 +103,13 @@
         <div class="browse">
             <form method="POST">
                 {% csrf_token %}
+                {% if random_problem %}
+                    <div class="problem">
+                        <p>{{ random_problem }}</p>
+                    </div>
+                {% endif %}         
                 <button type="submit" name="new_problem">New Problem</button>
             </form>
-            {% if random_problem %}
-                <div class="problem">
-                    <p>{{ random_problem }}</p>
-                </div>
-            {% endif %}
         </div>
     </body>
 </html>
