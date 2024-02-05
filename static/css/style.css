@@ -137,14 +137,18 @@ list-style-type: none;
     padding-bottom: .7vw;
 }
 .tag{
-    border: #9eabcc 1.5px solid;
-    border-radius: 30px;
+    
     margin-right:5vw;
     margin-top: .5vw;
 }
 .tag .dropdown_item-1{
     margin-top:-5.5vw;
 }
+.tag .dropdown_item-6{
+    border: #9eabcc 1.5px solid;
+    border-radius: 30px;
+}
+
 .tags li {
     padding: 5px;
     margin-left:1.2vw;
