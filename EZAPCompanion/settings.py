@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -72,6 +75,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'EZAPCompanion.wsgi.application'
 
+FIREBASE_CONFIG_FILE = 'firebase_config.json'
+cred = credentials.Certificate(FIREBASE_CONFIG_FILE)
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://ezapcompanion-default-rtdb.firebaseio.com/'
+})
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
