@@ -55,7 +55,7 @@ a {
     transition: 0.3s all ease-in-out;
 }
 
-.browse button{
+.browse button { 
     margin-top:15vw;
     font-size: 25px;
     padding: 15px 50px;
@@ -73,18 +73,18 @@ a {
     color: #1e1e1e;
     cursor:pointer;
 }
+
 .browse button:hover {
     background-color: #9eabcc;
     color: #1e1e1e;
     cursor:pointer;
 }
 
-
 .selection {
     display: flex;
 }
-ul
-{
+
+ul {
 list-style-type: none;
 }
 
@@ -232,8 +232,39 @@ list-style-type: none;
     }
 }
 
-.problem {
-    position: absolute;
-    margin-top: 10px;
+.problems {
+    text-align: center;
+}
+
+.problems p {
+    margin-top: 100px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.problems ul li {
+    margin-top: 30px;
     padding: 10px;
+    font-size: 20px;
+    display: inline-block;
+    color: #ffffff;
+}
+
+.problems button { 
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 10px 30px;
+    border: #9eabcc 3px solid;
+    color: #ffffff;
+    background-color:#1e1e1e;
+    font-family: 'Lekton';
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s all ease-in-out;
+}
+
+.problems button:hover {
+    background-color: #9eabcc;
+    color: #1e1e1e;
+    cursor:pointer;
 }
