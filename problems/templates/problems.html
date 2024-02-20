@@ -9,6 +9,12 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <link rel="stylesheet" href="{% static 'mathquill-0.10.1/mathquill.css' %}"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="{% static 'mathquill-0.10.1/mathquill.js' %}"></script>
+        <script>
+            var MQ = MathQuill.getInterface(2);
+        </script>
     </head>
     <body>
         <a href = "/home/">
@@ -112,7 +118,25 @@
                             <li>\( {{ choice }} \)</li>
                         {% endfor %}
                     </ul>
-                {% endif %}         
+                    <p><span id="answer" onclick="clearPlaceholderText()">Enter answer</span></p>
+                    <script>
+                        function clearPlaceholderText() {
+                            var answerSpan = document.getElementById('answer');
+                            if (answerSpan.innerText.trim() === 'Enter answer') {
+                                answerSpan.innerText = '';
+                            }
+                        }
+
+                        var answerSpan = document.getElementById('answer');
+                        var answerMathField = MQ.MathField(answerSpan, {
+                            handlers: {
+                                edit: function() {
+                                    var enteredMath = answerMathField.latex();
+                                }
+                            }
+                        });
+                    </script>
+                {% endif %}
                 <button type="submit" name="new_problem">New Problem ></button>
             </form>
         </div>

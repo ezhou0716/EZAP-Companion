@@ -250,6 +250,13 @@ list-style-type: none;
     color: #ffffff;
 }
 
+.problems #answer {
+    padding: 10px 400px 10px 20px;
+    font-family: 'Lekton';
+    border: #9eabcc 1.5px solid;
+    border-radius: 10px;
+}
+
 .problems button { 
     margin-top: 50px;
     font-size: 20px;
