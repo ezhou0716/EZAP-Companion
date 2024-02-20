@@ -258,7 +258,8 @@ list-style-type: none;
 
 .problems #answer {
     padding: 10px 400px 10px 20px;
-    font-family: 'Lekton';
+    max-width: 200px;
+    caret-color: #9eabcc;
     border: #9eabcc 1.5px solid;
     border-radius: 10px;
 }

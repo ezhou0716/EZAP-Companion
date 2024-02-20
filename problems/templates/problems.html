@@ -126,16 +126,9 @@
                             <li>\( {{ choice }} \)</li>
                         {% endfor %}
                     </ul>
-                    <p><span id="answer" onclick="clearPlaceholderText()">Enter answer</span></p>
+                    <p><span id="answer" onclick="clearContent()">\text{Enter answer}</span></p>
                     <script>
-                        function clearPlaceholderText() {
-                            var answerSpan = document.getElementById('answer');
-                            if (answerSpan.innerText.trim() === 'Enter answer') {
-                                answerSpan.innerText = '';
-                            }
-                        }
-
-                        var answerSpan = document.getElementById('answer');
+                        var answerSpan = document.getElementById("answer");
                         var answerMathField = MQ.MathField(answerSpan, {
                             handlers: {
                                 edit: function() {
@@ -143,6 +136,10 @@
                                 }
                             }
                         });
+
+                        function clearContent(){
+                            answerMathField.latex("");
+                        }
                     </script>
                 {% endif %}
                 <button type="submit" name="new_problem">New Problem ></button>
