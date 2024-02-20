@@ -100,8 +100,16 @@
                 <script>
                     const tagButton = document.querySelector(".tag-button");
                     const tags = document.querySelector(".tags");
+                    let isExpanded = false; // To track the state of the button
 
                     tagButton.addEventListener("click", () => {
+                        if (isExpanded) {
+                            tagButton.style.width = '100px'; // Revert to original width or another value
+                            isExpanded = false;
+                        } else {
+                            tagButton.style.width = '250px'; // Increase width
+                            isExpanded = true;
+                        }
                         tags.classList.toggle("open");
                         var dropdown = document.querySelector('.dropdown_menu-1');
                     });              
