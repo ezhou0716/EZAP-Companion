@@ -51,14 +51,14 @@
                 <script>
                     const tagButton = document.querySelector(".tag-button");
                     const tags = document.querySelector(".tags");
-                    let isExpanded = false; // To track the state of the button
+                    let isExpanded = false;
 
                     tagButton.addEventListener("click", () => {
                         if (isExpanded) {
-                            tagButton.style.width = '70px'; // Revert to original width or another value
+                            tagButton.style.width = '70px';
                             isExpanded = false;
                         } else {
-                            tagButton.style.width = '300px'; // Increase width
+                            tagButton.style.width = '300px';
                             isExpanded = true;
                         }
                         tags.classList.toggle("open");
