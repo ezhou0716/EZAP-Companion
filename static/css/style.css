@@ -103,6 +103,7 @@ list-style-type: none;
     position: relative;
     margin: auto;
     display: inline-block;
+    z-index: 10000;
 }
 
 .tag-button {
@@ -139,6 +140,7 @@ list-style-type: none;
     width: 24vw;
     padding-top: .7vw;
     padding-bottom: .7vw;
+    background-color: #1e1e1e;
 }
 .tag{
     border: #9eabcc 1.5px solid;
@@ -255,7 +257,10 @@ list-style-type: none;
     font-size: 20px;
     display: inline-block;
     color: #ffffff;
+    
 }
+
+
 
 .problems #answer {
     padding: 10px 400px 10px 20px;
