@@ -15,6 +15,8 @@
         <script>
             var MQ = MathQuill.getInterface(2);
         </script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
     </head>
     <body>
         <a href = "/home/">
@@ -77,23 +79,42 @@
                             <li>\( {{ choice }} \)</li>
                         {% endfor %}
                     </ul>
-                    <p><span id="answer" onclick="clearContent()">\text{Enter answer}</span></p>
-                    <script>
-                        var answerSpan = document.getElementById("answer");
-                        var answerMathField = MQ.MathField(answerSpan, {
-                            handlers: {
-                                edit: function() {
-                                    var enteredMath = answerMathField.latex();
+                    <div class="answer-container">
+                        <p><span id="answer" onclick="clearContent()">\text{Enter answer}</span></p>
+                        <button id="check-answer">
+                            <ion-icon id="check-icon" name="checkmark" style="position: relative; top: 28px; left: 10px; padding: 2px;"></ion-icon>
+                        </button>
+                        <script>
+                            var answerSpan = document.getElementById("answer");
+                            var answerMathField = MQ.MathField(answerSpan, {
+                                handlers: {
+                                    edit: function() {
+                                        var enteredMath = answerMathField.latex();
+                                    }
+                                }
+                            });
+
+                            function clearContent(){
+                                answerMathField.latex("");
+                            }
+
+                            document.getElementById('check-answer').addEventListener('click', function(event) {
+                                event.preventDefault();
+                                checkAnswer();
+                            });
+
+                            function checkAnswer() {
+                                var checkIcon = document.getElementById('check-icon');
+                                if (answerMathField.latex() === "{{ random_problem.answer }}") {
+                                    checkIcon.style.backgroundColor = "green";
+                                } else {
+                                    checkIcon.style.backgroundColor = "red";
                                 }
                             }
-                        });
-
-                        function clearContent(){
-                            answerMathField.latex("");
-                        }
-                    </script>
+                        </script>
+                    </div>
                 {% endif %}
-                <button type="submit" name="new_problem">New Problem ></button>
+                <button id="new-problem" type="submit" name="new_problem">New Problem ></button>
             </form>
         </div>
     </body>

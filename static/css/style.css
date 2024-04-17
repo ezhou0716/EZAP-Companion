@@ -260,9 +260,13 @@ list-style-type: none;
     
 }
 
+.answer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
-.problems #answer {
+#answer {
     padding: 10px 400px 10px 20px;
     max-width: 200px;
     caret-color: #9eabcc;
@@ -270,7 +274,15 @@ list-style-type: none;
     border-radius: 10px;
 }
 
-.problems button { 
+#check-answer {
+    font-size: 30px;
+    color: #ffffff;
+    background-color:#1e1e1e;
+    font-family: 'Lekton';
+    border: none;
+}
+
+#new-problem { 
     margin-top: 50px;
     font-size: 20px;
     padding: 10px 30px;
