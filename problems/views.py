@@ -3,9 +3,9 @@ from firebase_admin import firestore
 import random
 
 # Create your views here.
-def get_problems():
+def get_problems(unit):
     db = firestore.client() 
-    ref = db.collection('derivatives')
+    ref = db.collection(unit)
 
     problems = [doc.to_dict() for doc in ref.stream()]
     
@@ -14,12 +14,9 @@ def get_problems():
 
 def problems(request):
     if request.method == 'POST' and 'new_problem' in request.POST:
-        # selected_unit = request.POST.get('units')
+        selected_unit = request.POST.get('units')
 
-        db = firestore.client() 
-        ref = db.collection('derivatives')
-
-        problems = [doc.to_dict() for doc in ref.stream()]
+        problems = get_problems(selected_unit)
 
         random_problem = random.choice(problems) if problems else None
 

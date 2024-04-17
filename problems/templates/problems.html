@@ -25,53 +25,53 @@
                 <h1>COMPANION</h1>
             </div>
         </a>
-        <div class="selection">
-            <div class="unit-selection">
-                <select name="units" id="units">
-                    <option value="limits">Unit 1: Limits and Continuity</option>
-                    <option value="derivatives">Unit 2: Differentiation: Definition and Fundamental Properties</option>
-                    <option value="chainrule">Unit 3: Differentiation: Composite, Implicit, and Inverse Functions</option>
-                    <option value="derivativeapps">Unit 4: Contextual Applications of Differentiation</option>
-                    <option value="derivativeapps2">Unit 5: Analytical Applications of Differentiation</option>
-                    <option value="integrals">Unit 6: Integration and Accumulation of Change</option>
-                    <option value="diffeqs">Unit 7: Differential Equations</option>
-                    <option value="integralapps">Unit 8: Applications of Integration</option>
-                    <option value="polars">Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions</option>
-                    <option value="series">Unit 10: Infinite Sequences and Series</option>
-                </select>            
-            </div>
-            <div class="tag-selection">
-                <span class="tag-button">Tags: </span>
-                <ul class="tags dropdown_menu dropdown_menu-1">
-                    {% for tag in tags %}
-                        <li class="tag dropdown_item-{{ forloop.counter }}">
-                            <input type="checkbox" name="tags" value="{{ tag }}">
-                            <span class="tag-text">{{ tag }}</span>
-                        </li>
-                    {% endfor %}
-                </ul>
-                <script>
-                    const tagButton = document.querySelector(".tag-button");
-                    const tags = document.querySelector(".tags");
-                    let isExpanded = false;
+        <form method="POST">
+            {% csrf_token %}
+            <div class="selection">
+                <div class="unit-selection">
+                    <select name="units" id="units">
+                        <option value="limits">Unit 1: Limits and Continuity</option>
+                        <option value="derivatives">Unit 2: Differentiation: Definition and Fundamental Properties</option>
+                        <option value="chainrule">Unit 3: Differentiation: Composite, Implicit, and Inverse Functions</option>
+                        <option value="derivativeapps">Unit 4: Contextual Applications of Differentiation</option>
+                        <option value="derivativeapps2">Unit 5: Analytical Applications of Differentiation</option>
+                        <option value="integrals">Unit 6: Integration and Accumulation of Change</option>
+                        <option value="diffeqs">Unit 7: Differential Equations</option>
+                        <option value="integralapps">Unit 8: Applications of Integration</option>
+                        <option value="polars">Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions</option>
+                        <option value="series">Unit 10: Infinite Sequences and Series</option>
+                    </select>
+                </div>
+                <div class="tag-selection">
+                    <span class="tag-button">Tags: </span>
+                    <ul class="tags dropdown_menu dropdown_menu-1">
+                        {% for tag in tags %}
+                            <li class="tag dropdown_item-{{ forloop.counter }}">
+                                <input type="checkbox" name="tags" value="{{ tag }}">
+                                <span class="tag-text">{{ tag }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <script>
+                        const tagButton = document.querySelector(".tag-button");
+                        const tags = document.querySelector(".tags");
+                        let isExpanded = false;
 
-                    tagButton.addEventListener("click", () => {
-                        if (isExpanded) {
-                            tagButton.style.width = '70px';
-                            isExpanded = false;
-                        } else {
-                            tagButton.style.width = '300px';
-                            isExpanded = true;
-                        }
-                        tags.classList.toggle("open");
-                        var dropdown = document.querySelector('.dropdown_menu-1');
-                    });              
-                </script>
+                        tagButton.addEventListener("click", () => {
+                            if (isExpanded) {
+                                tagButton.style.width = '70px';
+                                isExpanded = false;
+                            } else {
+                                tagButton.style.width = '300px';
+                                isExpanded = true;
+                            }
+                            tags.classList.toggle("open");
+                            var dropdown = document.querySelector('.dropdown_menu-1');
+                        });              
+                    </script>
+                </div>
             </div>
-        </div>
-        <div class="problems">
-            <form method="POST">
-                {% csrf_token %}
+            <div class="problems">
                 {% if random_problem %}
                     <p>$$ {{ random_problem.problem }} $$</p>
                     <ul>
@@ -82,7 +82,7 @@
                     <div class="answer-container">
                         <p><span id="answer" onclick="clearContent()">\text{Enter answer}</span></p>
                         <button id="check-answer">
-                            <ion-icon id="check-icon" name="checkmark" style="position: relative; top: 28px; left: 10px; padding: 2px;"></ion-icon>
+                            <ion-icon id="check-icon" name="checkmark" style="position: relative; top: 42px; left: 10px; padding: 2px;"></ion-icon>
                         </button>
                         <script>
                             var answerSpan = document.getElementById("answer");
@@ -115,7 +115,7 @@
                     </div>
                 {% endif %}
                 <button id="new-problem" type="submit" name="new_problem">New Problem ></button>
-            </form>
-        </div>
+            </div>
+        </form>
     </body>
 </html>
