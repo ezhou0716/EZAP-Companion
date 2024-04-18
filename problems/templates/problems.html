@@ -73,7 +73,9 @@
             </div>
             <div class="problems">
                 {% if random_problem %}
-                    <p>$$ {{ random_problem.problem }} $$</p>
+                    <div class="problem-container">
+                        <p>$$ {{ random_problem.problem }} $$</p>
+                    </div>
                     <ul>
                         {% for choice in random_problem.choices %}
                             <li>\( {{ choice }} \)</li>
@@ -109,11 +111,10 @@
             });
 
             function checkAnswer() {
-                var checkIcon = document.getElementById('check-icon');
                 if (answerMathField.latex() === "{{ random_problem.answer }}") {
-                    checkIcon.style.backgroundColor = "green";
+                    answerSpan.style.borderColor = "green";
                 } else {
-                    checkIcon.style.backgroundColor = "red";
+                    answerSpan.style.borderColor = "red";
                 }
             }
         </script>

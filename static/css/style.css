@@ -245,6 +245,11 @@ list-style-type: none;
     text-align: center;
 }
 
+.problem-container {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
 .problems p {
     margin-top: 100px;
     font-size: 24px;
