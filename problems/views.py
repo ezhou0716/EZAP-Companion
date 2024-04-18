@@ -24,6 +24,6 @@ def problems(request):
         for problem in problems:
             tags.update(problem['tags'])
         
-        return render(request, 'problems.html', {'random_problem': random_problem, 'tags': tags})
+        return render(request, 'problems.html', {'random_problem': random_problem, 'tags': tags, 'selected_unit': selected_unit})
     else:
         return render(request, 'problems.html')

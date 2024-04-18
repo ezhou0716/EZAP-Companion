@@ -25,21 +25,21 @@
                 <h1>COMPANION</h1>
             </div>
         </a>
-        <form method="POST">
+        <form method="POST" id="problem-form">
             {% csrf_token %}
             <div class="selection">
                 <div class="unit-selection">
                     <select name="units" id="units">
-                        <option value="limits">Unit 1: Limits and Continuity</option>
-                        <option value="derivatives">Unit 2: Differentiation: Definition and Fundamental Properties</option>
-                        <option value="chainrule">Unit 3: Differentiation: Composite, Implicit, and Inverse Functions</option>
-                        <option value="derivativeapps">Unit 4: Contextual Applications of Differentiation</option>
-                        <option value="derivativeapps2">Unit 5: Analytical Applications of Differentiation</option>
-                        <option value="integrals">Unit 6: Integration and Accumulation of Change</option>
-                        <option value="diffeqs">Unit 7: Differential Equations</option>
-                        <option value="integralapps">Unit 8: Applications of Integration</option>
-                        <option value="polars">Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions</option>
-                        <option value="series">Unit 10: Infinite Sequences and Series</option>
+                        <option value="limits" {% if selected_unit == 'limits' %}selected{% endif %}>Unit 1: Limits and Continuity</option>
+                        <option value="derivatives" {% if selected_unit == 'derivatives' %}selected{% endif %}>Unit 2: Differentiation: Definition and Fundamental Properties</option>
+                        <option value="chainrule" {% if selected_unit == 'chainrule' %}selected{% endif %}>Unit 3: Differentiation: Composite, Implicit, and Inverse Functions</option>
+                        <option value="derivativeapps" {% if selected_unit == 'derivativeapps' %}selected{% endif %}>Unit 4: Contextual Applications of Differentiation</option>
+                        <option value="derivativeapps2" {% if selected_unit == 'derivativeapps2' %}selected{% endif %}>Unit 5: Analytical Applications of Differentiation</option>
+                        <option value="integrals" {% if selected_unit == 'integrals' %}selected{% endif %}>Unit 6: Integration and Accumulation of Change</option>
+                        <option value="diffeqs" {% if selected_unit == 'diffeqs' %}selected{% endif %}>Unit 7: Differential Equations</option>
+                        <option value="integralapps" {% if selected_unit == 'integralapps' %}selected{% endif %}>Unit 8: Applications of Integration</option>
+                        <option value="polars" {% if selected_unit == 'polars' %}selected{% endif %}>Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions</option>
+                        <option value="series" {% if selected_unit == 'series' %}selected{% endif %}>Unit 10: Infinite Sequences and Series</option>
                     </select>
                 </div>
                 <div class="tag-selection">
@@ -84,38 +84,38 @@
                         <button id="check-answer">
                             <ion-icon id="check-icon" name="checkmark" style="position: relative; top: 42px; left: 10px; padding: 2px;"></ion-icon>
                         </button>
-                        <script>
-                            var answerSpan = document.getElementById("answer");
-                            var answerMathField = MQ.MathField(answerSpan, {
-                                handlers: {
-                                    edit: function() {
-                                        var enteredMath = answerMathField.latex();
-                                    }
-                                }
-                            });
-
-                            function clearContent(){
-                                answerMathField.latex("");
-                            }
-
-                            document.getElementById('check-answer').addEventListener('click', function(event) {
-                                event.preventDefault();
-                                checkAnswer();
-                            });
-
-                            function checkAnswer() {
-                                var checkIcon = document.getElementById('check-icon');
-                                if (answerMathField.latex() === "{{ random_problem.answer }}") {
-                                    checkIcon.style.backgroundColor = "green";
-                                } else {
-                                    checkIcon.style.backgroundColor = "red";
-                                }
-                            }
-                        </script>
                     </div>
                 {% endif %}
                 <button id="new-problem" type="submit" name="new_problem">New Problem ></button>
             </div>
         </form>
+        <script>
+            var answerSpan = document.getElementById("answer");
+            var answerMathField = MQ.MathField(answerSpan, {
+                handlers: {
+                    edit: function() {
+                        var enteredMath = answerMathField.latex();
+                    }
+                }
+            });
+
+            function clearContent(){
+                answerMathField.latex("");
+            }
+
+            document.getElementById('check-answer').addEventListener('click', function(event) {
+                event.preventDefault();
+                checkAnswer();
+            });
+
+            function checkAnswer() {
+                var checkIcon = document.getElementById('check-icon');
+                if (answerMathField.latex() === "{{ random_problem.answer }}") {
+                    checkIcon.style.backgroundColor = "green";
+                } else {
+                    checkIcon.style.backgroundColor = "red";
+                }
+            }
+        </script>
     </body>
 </html>
