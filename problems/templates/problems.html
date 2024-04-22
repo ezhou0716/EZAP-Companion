@@ -67,7 +67,32 @@
                             }
                             tags.classList.toggle("open");
                             var dropdown = document.querySelector('.dropdown_menu-1');
-                        });              
+                        });
+                        
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const checkboxes = document.querySelectorAll("input[type='checkbox']");
+                            checkboxes.forEach(function(checkbox) {
+                                checkbox.addEventListener('change', function() {
+                                    const selectedTags = [];
+                                    checkboxes.forEach(function(cb) {
+                                        if (cb.checked) {
+                                            selectedTags.push(cb.value);
+                                        }
+                                    });
+                                    localStorage.setItem('selectedTags', JSON.stringify(selectedTags));
+                                });
+                            });
+
+                            const storedTags = JSON.parse(localStorage.getItem('selectedTags'));
+                            if (storedTags) {
+                                storedTags.forEach(function(tag) {
+                                    const checkbox = document.querySelector("input[value='" + tag + "']");
+                                    if (checkbox) {
+                                        checkbox.checked = true;
+                                    }
+                                });
+                            }
+                        });
                     </script>
                 </div>
             </div>

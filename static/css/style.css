@@ -136,16 +136,17 @@ list-style-type: none;
     position: absolute;
     top: 100%;
     transform: translateX(-50%); 
-    margin-left:12.2vw;
+    margin-left: 12vw;
     width: 24vw;
     padding-top: .7vw;
     padding-bottom: .7vw;
     background-color: #1e1e1e;
 }
-.tag{
+
+.tag {
     border: #9eabcc 1.5px solid;
     border-radius: 30px;
-    margin-right:5vw;
+    margin-right: 5vw;
     margin-top: .5vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), /* Horizontal offset, Vertical offset, Blur radius, Color */
     0 6px 20px rgba(0, 0, 0, 0.19);
