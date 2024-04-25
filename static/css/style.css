@@ -136,7 +136,6 @@ list-style-type: none;
     position: absolute;
     top: 100%;
     transform: translateX(-50%); 
-    margin-left: 12vw;
     width: 24vw;
     padding-top: .7vw;
     padding-bottom: .7vw;
@@ -161,7 +160,6 @@ list-style-type: none;
 
 .tags li {
     padding: 5px;
-    margin-left:1.2vw;
 }
 
 .tags.open {
