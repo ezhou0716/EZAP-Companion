@@ -133,13 +133,15 @@ ul {
 
 .tags {
     display: none;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
     font-size: 1em;
     font-family: 'Lekton';
     color: #ffffff;
     border-radius: 10px;
     position:absolute;
     top: 100%;
-    justify-content: center; 
     width: 24vw;
     padding-top: .7vw;
     padding-bottom: .7vw;
