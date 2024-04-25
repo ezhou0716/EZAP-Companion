@@ -151,11 +151,12 @@ ul {
 .tag {
     border: #9eabcc 1.5px solid;
     border-radius: 30px;
-    margin-right: 4vw;
+    width: 80%;
     margin-top: .5vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), /* Horizontal offset, Vertical offset, Blur radius, Color */
     0 6px 20px rgba(0, 0, 0, 0.19);
 }
+
 .tag .dropdown_item-1 {
     margin-top: -5.5vw;
 }
