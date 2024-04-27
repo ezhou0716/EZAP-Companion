@@ -40,6 +40,20 @@
                         <option value="integralapps" {% if selected_unit == 'integralapps' %}selected{% endif %}>Unit 8: Applications of Integration</option>
                         <option value="polars" {% if selected_unit == 'polars' %}selected{% endif %}>Unit 9: Parametric Equations, Polar Coordinates, and Vector-Valued Functions</option>
                         <option value="series" {% if selected_unit == 'series' %}selected{% endif %}>Unit 10: Infinite Sequences and Series</option>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                // Get the select element for units
+                                var unitSelect = document.getElementById("units");
+                        
+                                // Add event listener for change event
+                                unitSelect.addEventListener('change', function() {
+                                    // Get the selected value
+                                    var selectedUnit = unitSelect.value;
+                                    // Redirect to the same page with the selected unit as a query parameter
+                                    window.location.href = '';
+                                });
+                            });
+                        </script>
                     </select>
                 </div>
                 <div class="tag-selection">
